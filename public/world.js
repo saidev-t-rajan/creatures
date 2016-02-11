@@ -3,7 +3,7 @@ function blastoff()
   var canvas = $("#canvas")[0];
   var ctx = canvas.getContext('2d');
 
-  var num = 10;
+  var num = 24;
   var fps = 100;
 
   canvas.width = $('#canvas-container').width();
@@ -79,8 +79,8 @@ function blastoff()
       // draw
       creature.draw();
     });
-    if (location.hash == "#/")
-      setTimeout(loop, 1000/fps);
+
+    window.setTimeout(function() { loop() }, 1000/fps)
   }
 
   // blastoff
